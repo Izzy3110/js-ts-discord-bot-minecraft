@@ -1,0 +1,6 @@
+services:
+  discord-bot:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./data:/usr/src/app/data
