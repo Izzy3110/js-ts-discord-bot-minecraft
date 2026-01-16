@@ -7,3 +7,4 @@ data/favicons/server/
 data/lastStatus.json
 dist/
 node_modules/
+discord-bot.code-workspace
