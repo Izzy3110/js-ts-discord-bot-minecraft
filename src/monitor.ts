@@ -84,13 +84,13 @@ export class MinecraftMonitor {
             console.log('Server is OFFLINE');
             this.isOnline = false;
 
-            // this.sendDiscordMessage('⚠️ **The Minecraft server is currently OFFLINE!**');
+            this.sendDiscordMessage('⚠️ **The Minecraft server is currently OFFLINE!**');
             this.lastOfflineNotificationTime = now;
         } else {
             // Already offline, check reminder
             if (now - this.lastOfflineNotificationTime >= this.OFFLINE_NOTIFICATION_INTERVAL) {
                 console.log('Sending offline reminder...');
-                // this.sendDiscordMessage('⚠️ **Reminder:** The Minecraft server is still OFFLINE.');
+                this.sendDiscordMessage('⚠️ **Reminder:** The Minecraft server is still OFFLINE.');
                 this.lastOfflineNotificationTime = now;
             }
         }
